@@ -81,7 +81,7 @@ void Olimex16x2::clear() {
 	i2c->beginTransmission(i2cAddr);
 	i2c->write(cmd[Commands::LCD_CLR]);
 	i2c->endTransmission();
-	delay(20);
+	delay(100);
 }
 
 void Olimex16x2::drawChar(char character, uint8_t line, uint8_t pos) {

@@ -8,6 +8,7 @@ String greeting = "Hello World!";
 void setup() {
 	lcd.begin();
 	lcd.setBacklight(255);
+	lcd.clear();
 	lcd.drawLine(0, greeting);
 }
 

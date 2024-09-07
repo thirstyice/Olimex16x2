@@ -94,6 +94,10 @@ void Olimex16x2::drawChar(char character, uint8_t line, uint8_t pos) {
 	if (line>1) {
 		line=1;
 	}
+	if (character == buffer[line][pos]) {
+		return;
+	}
+	buffer[line][pos] = character;
 	i2c->beginTransmission(i2cAddr);
 	i2c->write(cmd[Commands::LCD_WR]);
 	i2c->write(!line);

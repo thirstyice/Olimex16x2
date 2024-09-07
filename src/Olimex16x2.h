@@ -51,6 +51,10 @@ protected:
 		0x10
 	};
 	int request(uint8_t command);
+	unsigned char buffer[2][16] = {
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+	};
 	const uint8_t i2cAddr = 0x30;
 	TwoWire* i2c = nullptr;
 };

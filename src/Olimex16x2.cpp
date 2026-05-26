@@ -85,9 +85,6 @@ void Olimex16x2::clear() {
 }
 
 void Olimex16x2::drawChar(char character, uint8_t line, uint8_t pos) {
-	if (character<32 || character>126) {
-		return;
-	}
 	if (pos>15) {
 		pos=15;
 	}
